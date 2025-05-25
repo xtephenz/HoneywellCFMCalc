@@ -57,7 +57,6 @@ function App () {
           <span className='block pt-3'>CFM Calculator</span>
         </span>
       )
-
     }
   }
   return (
@@ -77,7 +76,7 @@ function App () {
                 placeholder='e.g. 30'
                 value={area}
                 onChange={e => setArea(e.target.value)}
-                className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400'
+                className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 placeholder-gray-400'
               />
             </div>
             <div>
@@ -109,7 +108,7 @@ function App () {
                 id='cigarette'
                 value={cigaretteType}
                 onChange={e => setCigaretteType(e.target.value)}
-                className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400'
+                className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800'
               >
                 <option value='rokokBiasa'>Rokok biasa</option>
                 <option value='cigar'>Cigar</option>
