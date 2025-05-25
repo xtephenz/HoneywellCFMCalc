@@ -117,7 +117,7 @@ function App () {
             </div>
             <button
               type='submit'
-              className='w-full !bg-red-500 text-white uppercase h-14 sm:h-16 mt-4 font-extrabold !text-lg sm:!text-2xl py-2 rounded hover:!bg-red-400 transition'
+              className='w-full !bg-red-500 text-white uppercase h-14 sm:h-16 mt-4 font-extrabold !text-lg sm:!text-2xl py-2 rounded hover:!bg-red-600 transition'
             >
               Submit
             </button>
@@ -130,7 +130,7 @@ function App () {
                 setCigaretteType('rokokBiasa')
                 setResult(undefined)
               }}
-              className='w-full !bg-gray-300 text-gray-800 uppercase h-12 sm:h-16 mt-2 font-extrabold !text-lg sm:!text-2xl py-2 rounded hover:bg-gray-400 transition'
+              className='w-full !bg-gray-300 text-gray-800 uppercase h-12 sm:h-16 mt-2 font-extrabold !text-lg sm:!text-2xl py-2 rounded hover:!bg-gray-400 transition'
             >
               Reset
             </button>
