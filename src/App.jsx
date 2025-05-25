@@ -62,7 +62,7 @@ function App () {
   return (
     <>
       <div className='fixed inset-0 bg-red-500 flex items-center justify-center p-2'>
-        <div className='w-full max-w-md min-w-[380px] bg-white p-4 sm:p-8 rounded-xl shadow-md'>
+        <div className='w-full text-gray-600 max-w-md min-w-[380px] bg-white p-4 sm:p-8 rounded-xl shadow-md'>
           <div className='block'>
             <h1 className='!text-4xl md:!text-5xl font-bold !text-gray-600 text-center mb-6 sm:mb-8'>
               {resultDisplay(result)}
@@ -70,7 +70,9 @@ function App () {
           </div>
           <form onSubmit={handleClick} className='space-y-4 sm:space-y-6'>
             <div>
-              <label className='block mb-1 font-medium  text-gray-800'>Room area (m²):</label>
+              <label className='block mb-1 font-medium  text-gray-600'>
+                Room area (m²):
+              </label>
               <input
                 type='text'
                 placeholder='e.g. 30'
@@ -80,7 +82,9 @@ function App () {
               />
             </div>
             <div>
-              <label className='block mb-1 font-medium  text-gray-800'>Room height (m):</label>
+              <label className='block mb-1 font-medium  text-gray-600'>
+                Room height (m):
+              </label>
               <input
                 type='text'
                 placeholder='e.g. 2.5'
@@ -90,7 +94,7 @@ function App () {
               />
             </div>
             <div>
-              <label className='block mb-1 font-medium  text-gray-800'>
+              <label className='block mb-1 font-medium  text-gray-600'>
                 Number of smokers:
               </label>
               <input
@@ -102,7 +106,9 @@ function App () {
               />
             </div>
             <div className='relative'>
-              <label className='block mb-1 font-medium  text-gray-800'>Cigarette type:</label>
+              <label className='block mb-1 font-medium  text-gray-600'>
+                Cigarette type:
+              </label>
               <select
                 name='cigarette'
                 id='cigarette'
@@ -110,7 +116,9 @@ function App () {
                 onChange={e => setCigaretteType(e.target.value)}
                 className='w-full px-3 pr-8 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800'
               >
-                <option value='rokokBiasa'>Cigarette / Iqos / Vape</option>
+                <option className='text-gray-600' value='rokokBiasa'>
+                  Cigarette / Iqos / Vape
+                </option>
                 <option value='cigar'>Cigar</option>
               </select>
               <div className='pointer-events-none absolute top-9 right-0 flex items-center pr-3 text-gray-500'>
@@ -142,7 +150,7 @@ function App () {
                 setCigaretteType('rokokBiasa')
                 setResult(undefined)
               }}
-              className='w-full !bg-gray-300 text-gray-800 uppercase h-12 sm:h-16 mt-2 font-extrabold !text-lg sm:!text-2xl py-2 rounded hover:!bg-gray-400 transition'
+              className='w-full !bg-gray-300 text-gray-600 uppercase h-12 sm:h-16 mt-2 font-extrabold !text-lg sm:!text-2xl py-2 rounded hover:!bg-gray-400 transition'
             >
               Reset
             </button>
