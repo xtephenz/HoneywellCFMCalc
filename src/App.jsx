@@ -70,7 +70,7 @@ function App () {
           </div>
           <form onSubmit={handleClick} className='space-y-4 sm:space-y-6'>
             <div>
-              <label className='block mb-1 font-medium'>Room area (m²):</label>
+              <label className='block mb-1 font-medium  text-gray-800'>Room area (m²):</label>
               <input
                 type='text'
                 placeholder='e.g. 30'
@@ -80,7 +80,7 @@ function App () {
               />
             </div>
             <div>
-              <label className='block mb-1 font-medium'>Room height (m):</label>
+              <label className='block mb-1 font-medium  text-gray-800'>Room height (m):</label>
               <input
                 type='text'
                 placeholder='e.g. 2.5'
@@ -90,7 +90,7 @@ function App () {
               />
             </div>
             <div>
-              <label className='block mb-1 font-medium'>
+              <label className='block mb-1 font-medium  text-gray-800'>
                 Number of smokers:
               </label>
               <input
@@ -102,7 +102,7 @@ function App () {
               />
             </div>
             <div className='relative'>
-              <label className='block mb-1 font-medium'>Cigarette type:</label>
+              <label className='block mb-1 font-medium  text-gray-800'>Cigarette type:</label>
               <select
                 name='cigarette'
                 id='cigarette'
