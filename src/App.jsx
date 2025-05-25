@@ -65,7 +65,7 @@ function App () {
       <div className='fixed inset-0 bg-red-500 flex items-center justify-center p-2'>
         <div className='w-full max-w-md min-w-[380px] bg-white p-4 sm:p-8 rounded-xl shadow-md'>
           <div className='block'>
-            <h1 className='!text-4xl md:!text-5xl font-bold text-center mb-6 sm:mb-8'>
+            <h1 className='!text-4xl md:!text-5xl font-bold !text-gray-600 text-center mb-6 sm:mb-8'>
               {resultDisplay(result)}
             </h1>
           </div>
