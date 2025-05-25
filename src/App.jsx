@@ -53,8 +53,8 @@ function App () {
     } else {
       return (
         <span>
-          <span className='block sm:inline lg:block'>Honeywell</span>
-          <span className='block pt-3'>CFM Calculator</span>
+          <span className='block sm:inline lg:block'>Honeywell EAC</span>
+          <span className='block pt-3'>Sizing Calculator</span>
         </span>
       )
     }
@@ -101,18 +101,31 @@ function App () {
                 className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 placeholder-gray-400'
               />
             </div>
-            <div>
+            <div className='relative'>
               <label className='block mb-1 font-medium'>Cigarette type:</label>
               <select
                 name='cigarette'
                 id='cigarette'
                 value={cigaretteType}
                 onChange={e => setCigaretteType(e.target.value)}
-                className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800'
+                className='w-full px-3 pr-8 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800'
               >
-                <option value='rokokBiasa'>Rokok biasa</option>
+                <option value='rokokBiasa'>Cigarette / Iqos / Vape</option>
                 <option value='cigar'>Cigar</option>
               </select>
+              <div className='pointer-events-none absolute top-9 right-0 flex items-center pr-3 text-gray-500'>
+                <svg
+                  className='h-7 w-7'
+                  viewBox='0 0 20 20'
+                  fill='none'
+                  stroke='currentColor'
+                  strokeWidth='1.5'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                >
+                  <path d='M7 7l3 3 3-3' />
+                </svg>
+              </div>
             </div>
             <button
               type='submit'
