@@ -42,22 +42,28 @@ function App () {
 
     setResult(smokeAmount.toFixed(2))
   }
-  const resultDisplay = (result) => {
+  const resultDisplay = result => {
     if (result) {
       return (
         <span>
-          <span className="block sm:inline lg:block">Result:</span>
-          <span className="block sm:inline lg:block">&nbsp;{result} CFM</span>
+          <span className='block sm:inline lg:block'>Result:</span>
+          <span className='block sm:inline lg:block'>&nbsp;{result} CFM</span>
         </span>
       )
     } else {
-      return 'Honeywell CFM Calculator'
+      return (
+        <span>
+          <span className='block sm:inline lg:block'>Honeywell</span>
+          <span className='block pt-3'>CFM Calculator</span>
+        </span>
+      )
+
     }
   }
   return (
     <>
       <div className='fixed inset-0 bg-red-500 flex items-center justify-center p-2'>
-        <div className='w-full  min-w-[400px] max-w-md bg-white p-4 sm:p-8 rounded-xl shadow-md'>
+        <div className='w-full max-w-md min-w-[380px] bg-white p-4 sm:p-8 rounded-xl shadow-md'>
           <div className='block'>
             <h1 className='!text-4xl md:!text-5xl font-bold text-center mb-6 sm:mb-8'>
               {resultDisplay(result)}
@@ -111,7 +117,7 @@ function App () {
             </div>
             <button
               type='submit'
-              className='w-full !bg-red-500 text-white uppercase h-14 sm:h-16 mt-4 font-extrabold !text-md sm:!text-2xl py-2 rounded hover:!bg-red-400 transition'
+              className='w-full !bg-red-500 text-white uppercase h-14 sm:h-16 mt-4 font-extrabold !text-lg sm:!text-2xl py-2 rounded hover:!bg-red-400 transition'
             >
               Submit
             </button>
@@ -124,7 +130,7 @@ function App () {
                 setCigaretteType('rokokBiasa')
                 setResult(undefined)
               }}
-              className='w-full !bg-gray-300 text-gray-800 uppercase h-12 sm:h-16 mt-2 font-extrabold !text-sm sm:!text-2xl py-2 rounded hover:bg-gray-400 transition'
+              className='w-full !bg-gray-300 text-gray-800 uppercase h-12 sm:h-16 mt-2 font-extrabold !text-lg sm:!text-2xl py-2 rounded hover:bg-gray-400 transition'
             >
               Reset
             </button>
