@@ -86,7 +86,7 @@ function App () {
                 placeholder='e.g. 2.5'
                 value={height}
                 onChange={e => setHeight(e.target.value)}
-                className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400'
+                className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 placeholder-gray-400'
               />
             </div>
             <div>
@@ -98,7 +98,7 @@ function App () {
                 placeholder='e.g. 2'
                 value={smokers}
                 onChange={e => setSmokers(e.target.value)}
-                className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400'
+                className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 placeholder-gray-400'
               />
             </div>
             <div>
