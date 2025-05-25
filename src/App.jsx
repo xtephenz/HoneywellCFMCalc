@@ -42,17 +42,28 @@ function App () {
 
     setResult(smokeAmount.toFixed(2))
   }
-
+  const resultDisplay = (result) => {
+    if (result) {
+      return (
+        <span>
+          <span className="block sm:inline lg:block">Result:</span>
+          <span className="block sm:inline lg:block">&nbsp;{result} CFM</span>
+        </span>
+      )
+    } else {
+      return 'Honeywell CFM Calculator'
+    }
+  }
   return (
     <>
-      <div className='bg-red-500 min-w-full h-screen fixed top-0 left-0 m-0 p-0 min-h-screen w-full flex items-center justify-center'>
-        <div className='max-w-md mx-auto bg-white p-8 min-w-xl rounded-xl shadow-md'>
+      <div className='fixed inset-0 bg-red-500 flex items-center justify-center p-2'>
+        <div className='w-full  min-w-[400px] max-w-md bg-white p-4 sm:p-8 rounded-xl shadow-md'>
           <div className='block'>
-            <h1 className='text-2xl font-bold  text-center mb-8'>
-              {result ? `Result: ${result} CFM` : 'Honeywell CFM Calculator'}
+            <h1 className='!text-4xl md:!text-5xl font-bold text-center mb-6 sm:mb-8'>
+              {resultDisplay(result)}
             </h1>
           </div>
-          <form onSubmit={handleClick} className='space-y-6'>
+          <form onSubmit={handleClick} className='space-y-4 sm:space-y-6'>
             <div>
               <label className='block mb-1 font-medium'>Room area (m²):</label>
               <input
@@ -100,7 +111,7 @@ function App () {
             </div>
             <button
               type='submit'
-              className='w-full !bg-red-500 text-white uppercase h-16 mt-5 font-extrabold !text-2xl py-2 rounded hover:!bg-red-400 transition'
+              className='w-full !bg-red-500 text-white uppercase h-14 sm:h-16 mt-4 font-extrabold !text-md sm:!text-2xl py-2 rounded hover:!bg-red-400 transition'
             >
               Submit
             </button>
@@ -113,7 +124,7 @@ function App () {
                 setCigaretteType('rokokBiasa')
                 setResult(undefined)
               }}
-              className='w-full !bg-gray-300 text-gray-800 uppercase h-16  font-extrabold !text-2xl py-2 rounded hover:bg-gray-400 transition'
+              className='w-full !bg-gray-300 text-gray-800 uppercase h-12 sm:h-16 mt-2 font-extrabold !text-sm sm:!text-2xl py-2 rounded hover:bg-gray-400 transition'
             >
               Reset
             </button>
